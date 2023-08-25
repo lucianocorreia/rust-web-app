@@ -6,3 +6,13 @@
 
 # Scope down tracing, to filter outr external tracing.
 RUST_LOG = "rust_web_app=debug"
+
+
+# -- Service Environment Variables --
+# IMPORTANT:
+#   For cargo commands only.
+#   For deplyed env, should be managed by container.
+#   (e.g., Kubernetes, Docker, etc.)
+
+## -- ConfigMap --
+SERVICE_WEB_FOLDER = "web-folder/"
