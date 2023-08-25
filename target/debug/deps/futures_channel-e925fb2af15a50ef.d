@@ -1,0 +1,9 @@
+/Users/correia/github.com/lucianocorreia/rust-web-app/target/debug/deps/futures_channel-e925fb2af15a50ef.rmeta: /Users/correia/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-channel-0.3.28/src/lib.rs /Users/correia/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-channel-0.3.28/src/lock.rs /Users/correia/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-channel-0.3.28/src/mpsc/mod.rs /Users/correia/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-channel-0.3.28/src/mpsc/queue.rs /Users/correia/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-channel-0.3.28/src/oneshot.rs
+
+/Users/correia/github.com/lucianocorreia/rust-web-app/target/debug/deps/futures_channel-e925fb2af15a50ef.d: /Users/correia/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-channel-0.3.28/src/lib.rs /Users/correia/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-channel-0.3.28/src/lock.rs /Users/correia/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-channel-0.3.28/src/mpsc/mod.rs /Users/correia/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-channel-0.3.28/src/mpsc/queue.rs /Users/correia/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-channel-0.3.28/src/oneshot.rs
+
+/Users/correia/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-channel-0.3.28/src/lib.rs:
+/Users/correia/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-channel-0.3.28/src/lock.rs:
+/Users/correia/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-channel-0.3.28/src/mpsc/mod.rs:
+/Users/correia/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-channel-0.3.28/src/mpsc/queue.rs:
+/Users/correia/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-channel-0.3.28/src/oneshot.rs:
