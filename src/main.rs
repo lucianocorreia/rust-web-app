@@ -17,11 +17,19 @@ use crate::web::{routes_login, routes_static};
 use axum::{middleware, Router};
 use std::net::SocketAddr;
 use tower_cookies::CookieManagerLayer;
+use tracing::info;
+use tracing_subscriber::EnvFilter;
 
 // endregion: --- Modules
 
 #[tokio::main]
 async fn main() -> Result<()> {
+	tracing_subscriber::fmt()
+		.without_time()
+		.with_target(false)
+		.with_env_filter(EnvFilter::from_default_env())
+		.init();
+
 	// Initialize ModelManager.
 	let mm = ModelManager::new().await?;
 
@@ -38,8 +46,9 @@ async fn main() -> Result<()> {
 		.fallback_service(routes_static::serve_dir());
 
 	// region:    --- Start Server
-	let addr = SocketAddr::from(([127, 0, 0, 1], 8080));
-	println!("->> {:<12} - {addr}\n", "LISTENING");
+	let addr = SocketAddr::from(([127, 0, 0, 1], 5001));
+
+	info!("{:<12} - {addr}\n", "LISTENING");
 	axum::Server::bind(&addr)
 		.serve(routes_all.into_make_service())
 		.await
