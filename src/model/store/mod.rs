@@ -1,3 +1,5 @@
+// region:    --- Modules
+
 mod error;
 
 pub use self::error::{Error, Result};
@@ -5,6 +7,8 @@ pub use self::error::{Error, Result};
 use crate::config;
 use sqlx::postgres::PgPoolOptions;
 use sqlx::{Pool, Postgres};
+
+// endregion: --- Modules
 
 pub type Db = Pool<Postgres>;
 
