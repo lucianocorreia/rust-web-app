@@ -12,3 +12,13 @@ client:
 .PHONY: dbup
 dbup:
 	@docker run --rm --name pg -p 5432:5432  -e POSTGRES_PASSWORD=welcome  postgres:15
+
+# dbdown
+.PHONY: dbdown
+dbdown:
+	@docker stop pg
+
+# test
+.PHONY: test
+test:
+	@cargo watch -q -c -x "test -- --nocapture"
