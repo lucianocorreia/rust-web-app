@@ -1,4 +1,4 @@
-use crate::{model, web};
+use crate::{crypt, model, web};
 use axum::http::StatusCode;
 use axum::response::{IntoResponse, Response};
 use serde::Serialize;
@@ -15,17 +15,24 @@ pub enum Error {
 	LoginFailUserHasNoPwd { user_id: i64 },
 	LoginFailPwdNotMatching { user_id: i64 },
 
-	// -- Modules
-	Model(model::Error),
-
 	// -- CtxExtError
 	CtxExt(web::mw_auth::CtxExtError),
+
+	// -- Modules
+	Model(model::Error),
+	Crypt(crypt::Error),
 }
 
 // region:    --- Froms
 impl From<model::Error> for Error {
 	fn from(e: model::Error) -> Self {
 		Error::Model(e)
+	}
+}
+
+impl From<crypt::Error> for Error {
+	fn from(e: crypt::Error) -> Self {
+		Error::Crypt(e)
 	}
 }
 // endregion: --- Froms
