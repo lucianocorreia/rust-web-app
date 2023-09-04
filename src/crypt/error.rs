@@ -8,6 +8,13 @@ pub enum Error {
 	KeyFailHmac,
 	// Pwd
 	PwdNotMatching,
+	// Token
+	TokenInvalidFormat,
+	TokenConnotDecodeIdent,
+	TokenCannotDecodeExp,
+	TokenSignatureNotMatching,
+	TokenExpNotIso,
+	TokenExpired,
 }
 
 impl core::fmt::Display for Error {

@@ -39,6 +39,7 @@ rand = "0.8.5"
 hmac = "0.12.1"
 sha2 = "0.10.7"
 base64-url = "2.0.0"
+time = "0.3.28"
 
 
 [dev-dependencies]
