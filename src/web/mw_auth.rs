@@ -2,7 +2,7 @@ use crate::crypt::token::{validate_web_token, Token};
 use crate::ctx::Ctx;
 use crate::model::user::{UserBmc, UserForAuth};
 use crate::model::ModelManager;
-use crate::web::{set_cookie_token, AUTH_TOKEN};
+use crate::web::{set_token_cookie, AUTH_TOKEN};
 use crate::web::{Error, Result};
 use async_trait::async_trait;
 use axum::extract::{FromRequestParts, State};
@@ -71,7 +71,7 @@ async fn _ctx_resolve(mm: State<ModelManager>, cookies: &Cookies) -> CtxExtResul
 		.map_err(|_| CtxExtError::FailValidate)?;
 
 	// -- Update Token
-	set_cookie_token(&cookies, &user.username, &user.token_salt.to_string())
+	set_token_cookie(&cookies, &user.username, &user.token_salt.to_string())
 		.map_err(|_| CtxExtError::CannotSetTokenCoookie)?;
 
 	// -- Create CtxExtResult
